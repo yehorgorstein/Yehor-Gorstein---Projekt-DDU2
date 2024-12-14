@@ -1,0 +1,22 @@
+body{
+    text-align: center;
+}
+
+#questionDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+#chooseAmount{
+    padding: 5px;
+    text-align: center;
+}
+
+#buttonCreate{
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 5px;
+    background-color: rgb(240, 238, 238);
+}
