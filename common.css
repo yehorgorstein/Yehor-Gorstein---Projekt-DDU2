@@ -2,26 +2,27 @@ body{
     text-align: center;
 }
 
-#questionDiv{
+.commonDiv{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
 }
 
-#chooseAmount{
+.commonInput{
+    width: 50px;
     padding: 5px;
     text-align: center;
 }
 
-#buttonCreate{
+.button{
     border: 1px solid black;
     border-radius: 5px;
     padding: 5px;
     background-color: rgb(240, 238, 238);
 }
 
-#buttonCreate:hover{
+.button:hover{
     background-color: rgb(202, 201, 201);
     cursor: pointer;
 }
