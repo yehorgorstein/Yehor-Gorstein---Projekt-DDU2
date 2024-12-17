@@ -30,9 +30,24 @@ grid.style.gap = "5px";
 grid.style.flexWrap = "wrap";
 
 let cellsArray;
-let chooseAmount = document.getElementById("chooseAmount");
+
+let commonDiv = document.createElement("div");
+commonDiv.classList.add("commonDiv");
+document.body.prepend(commonDiv);
+
+let question = document.createElement("p");
+question.textContent = "How many numbers in the grid?"
+commonDiv.appendChild(question);
+
+let chooseAmount = document.createElement("input");
+chooseAmount.classList.add("commonInput");
 chooseAmount.value = 95;
-let createButton = document.getElementById("buttonCreate");
+commonDiv.appendChild(chooseAmount);
+
+let createButton = document.createElement("div");
+createButton.textContent = "Create";
+createButton.classList.add("button");
+commonDiv.appendChild(createButton);
 
 createButton.addEventListener("click", function(){
     let cells = chooseAmount.value;
