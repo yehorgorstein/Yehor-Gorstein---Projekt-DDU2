@@ -35,6 +35,11 @@ let commonDiv = document.createElement("div");
 commonDiv.classList.add("commonDiv");
 document.body.prepend(commonDiv);
 
+let homeLink = document.createElement("a");
+homeLink.textContent = "Home";
+let href = homeLink.getAttribute("href");
+document.body.prepend(homeLink);
+
 let question = document.createElement("p");
 question.textContent = "How many numbers in the grid?"
 commonDiv.appendChild(question);
