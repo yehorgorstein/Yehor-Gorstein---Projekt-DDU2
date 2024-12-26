@@ -6,7 +6,7 @@ const createCells = amountOfCells => {
     grid.innerHTML = "";
     cellsArray = [];
     for (let i = 0; i < amountOfCells; i++){
-        let cell = document.createElement("div");
+        cell = document.createElement("div");
         let randomValue = numberRandomizer();
         cell.value = randomValue;
         cell.textContent = randomValue;
@@ -20,7 +20,6 @@ const createCells = amountOfCells => {
         grid.appendChild(cell);
         cellsArray.push(cell.value);
     }
-    console.log(cellsArray);
 };
 
 let grid = document.createElement("div");
@@ -30,6 +29,7 @@ grid.style.gap = "5px";
 grid.style.flexWrap = "wrap";
 
 let cellsArray;
+let cell;
 
 let commonDiv = document.createElement("div");
 commonDiv.classList.add("commonDiv");
@@ -37,7 +37,7 @@ document.body.prepend(commonDiv);
 
 let homeLink = document.createElement("a");
 homeLink.textContent = "Home";
-let href = homeLink.getAttribute("href");
+homeLink.href = "../index.html";
 document.body.prepend(homeLink);
 
 let question = document.createElement("p");
@@ -55,8 +55,6 @@ createButton.classList.add("button");
 commonDiv.appendChild(createButton);
 
 createButton.addEventListener("click", function(){
-    let cells = chooseAmount.value;
-    createCells(cells);
+    createCells(chooseAmount.value);
 });
-
 createCells(chooseAmount.value);
