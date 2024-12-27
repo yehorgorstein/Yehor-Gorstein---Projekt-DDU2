@@ -30,6 +30,7 @@ grid.style.flexWrap = "wrap";
 
 let cellsArray;
 let cell;
+let cells = grid.children;
 
 let commonDiv = document.createElement("div");
 commonDiv.classList.add("commonDiv");
