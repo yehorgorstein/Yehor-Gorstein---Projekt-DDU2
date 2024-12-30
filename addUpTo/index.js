@@ -1,7 +1,3 @@
-let buttonAddition = document.getElementById("buttonAddition");
-let additionResult = document.getElementById("additionResult");
-additionResult.value = 179;
-
 const getCellsArray = () => {
     let cellsValueArray = [];
     for(let cell of grid.children){
@@ -11,7 +7,11 @@ const getCellsArray = () => {
     return cellsValueArray;
 }
 
-buttonAddition.addEventListener("click", function(){
+let buttonAddition = document.getElementById("buttonAddition");
+let additionResult = document.getElementById("additionResult");
+additionResult.value = 179;
+
+buttonAddition.addEventListener("click", () => {
     for (let cell of grid.children){
         cell.style.backgroundColor = "lightgrey";
     }

@@ -1,17 +1,6 @@
-let fillCleared = document.getElementById("fillCleared");
-
-fillCleared.addEventListener("click", function(){
-    for (let cell of grid.children){
-        cell.classList.remove("cellCleared");
-        if (cell.textContent == ""){
-            cell.textContent = numberRandomizer();
-        }
-    }
-})
-
 const clearCells = () => {
     for (let cell of grid.children){
-        cell.addEventListener("click", function(){
+        cell.addEventListener("click", () => {
             if (cell.classList.contains("cellCleared")){
                 cell.classList.remove("cellCleared");
                 cell.textContent = numberRandomizer();
@@ -23,7 +12,18 @@ const clearCells = () => {
     }
 }
 
-createButton.addEventListener("click", function(){
+let fillCleared = document.getElementById("fillCleared");
+
+fillCleared.addEventListener("click", () => {
+    for (let cell of grid.children){
+        cell.classList.remove("cellCleared");
+        if (cell.textContent == ""){
+            cell.textContent = numberRandomizer();
+        }
+    }
+})
+
+createButton.addEventListener("click", () => {
     clearCells();
 })
 clearCells();

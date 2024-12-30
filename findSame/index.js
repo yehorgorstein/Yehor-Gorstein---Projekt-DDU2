@@ -1,17 +1,7 @@
-let buttonReset = document.getElementById("buttonReset");
-let copies = document.getElementById("copies");
-
-buttonReset.addEventListener("click", function(){
-    copiesText.innerHTML = "Click on a number to find copies";
-    for (let cell of grid.children){
-        cell.style.backgroundColor = "lightgrey";
-    }
-})
-
 const findSame = () => {
     copiesText.innerHTML = "Click on a number to find copies";
     for (let cell of grid.children){
-        cell.addEventListener("click", function(){
+        cell.addEventListener("click", () => {
             for (let cell of grid.children){
                 cell.style.backgroundColor = "lightgrey";
             }
@@ -27,7 +17,17 @@ const findSame = () => {
     }
 }
 
-createButton.addEventListener("click", function(){
+let buttonReset = document.getElementById("buttonReset");
+let copies = document.getElementById("copies");
+
+buttonReset.addEventListener("click", () => {
+    copiesText.innerHTML = "Click on a number to find copies";
+    for (let cell of grid.children){
+        cell.style.backgroundColor = "lightgrey";
+    }
+})
+
+createButton.addEventListener("click", () => {
     findSame();
 })
 findSame();

@@ -40,7 +40,7 @@ let grid = document.createElement("div");
 document.body.appendChild(grid);
 grid.classList.add("grid");
 
-createButton.addEventListener("click", function(){
+createButton.addEventListener("click", () => {
     createCells(chooseAmount.value);
 });
 createCells(chooseAmount.value);
