@@ -7,6 +7,7 @@ body{
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-bottom: 5px;
 }
 
 .commonInput{
@@ -25,4 +26,20 @@ body{
 .button:hover{
     background-color: rgb(202, 201, 201);
     cursor: pointer;
+}
+
+.grid{
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.cell{
+    background-color: lightgrey;
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
