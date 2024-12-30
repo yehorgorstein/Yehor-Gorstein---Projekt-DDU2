@@ -1,0 +1,7 @@
+.cellCleared{
+    background-color: red;
+}
+
+.cellCleared:hover{
+    background-color: orange;
+}
