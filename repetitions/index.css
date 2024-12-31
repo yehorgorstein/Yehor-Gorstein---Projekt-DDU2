@@ -1,0 +1,9 @@
+#notInPlaceInput{
+    height: 70px;
+}
+
+.hugeInput{
+    width: 600px;
+    padding: 5px;
+    text-align: center;
+}
