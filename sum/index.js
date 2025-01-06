@@ -1,7 +1,3 @@
-let sumAllInput = document.getElementById("sumAllInput");
-let sumMarkedInput = document.getElementById("sumMarkedInput");
-let buttonReset = document.getElementById("buttonReset");
-
 const sumAll = () => {
     totalSum = 0;
     for (let cell of grid.children){
@@ -32,6 +28,10 @@ const sumMarked = () => {
         })
     }
 }
+
+let sumAllInput = document.getElementById("sumAllInput");
+let sumMarkedInput = document.getElementById("sumMarkedInput");
+let buttonReset = document.getElementById("buttonReset");
 
 createButton.addEventListener("click", () => {
     sumAll();

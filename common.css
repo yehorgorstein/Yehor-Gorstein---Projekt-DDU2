@@ -1,5 +1,11 @@
+@font-face {
+    font-family: Josefin;
+    src: url(JosefinSans-VariableFont_wght.ttf);
+}
+
 body{
     text-align: center;
+    font-family: Josefin;
 }
 
 .commonDiv{
