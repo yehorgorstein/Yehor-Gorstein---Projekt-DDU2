@@ -17,6 +17,9 @@ const sumMarked = () => {
     sumMarkedInput.value = "-";
     for (let cell of grid.children){
         cell.addEventListener("click", () => {
+            if (cell.style.backgroundColor === "lightgreen"){
+                return;
+            }
             let cellValue = Number(cell.textContent);
             cell.style.backgroundColor = "lightgreen";
             if (cellValue){
