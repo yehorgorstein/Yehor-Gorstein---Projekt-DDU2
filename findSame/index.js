@@ -18,7 +18,7 @@ const findSame = () => {
 }
 
 let buttonReset = document.getElementById("buttonReset");
-let copies = document.getElementById("copies");
+let copiesText = document.getElementById("copiesText");
 
 buttonReset.addEventListener("click", () => {
     copiesText.innerHTML = "Click on a number to find copies";

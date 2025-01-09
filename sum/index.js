@@ -1,10 +1,7 @@
 const sumAll = () => {
     totalSum = 0;
     for (let cell of grid.children){
-        let cellValue = Number(cell.textContent);
-        if (cellValue){
-            totalSum += cellValue;
-        }
+        totalSum +=  Number(cell.textContent); 
     }
     sumAllInput.value = totalSum;
 }
@@ -16,14 +13,13 @@ const sumMarked = () => {
             if (cell.style.backgroundColor === "lightgreen"){
                 return;
             }
-            let cellValue = Number(cell.textContent);
             cell.style.backgroundColor = "lightgreen";
-            if (cellValue){
+            if (Number(cell.textContent)){
                 let currentValue = Number(sumMarkedInput.value);
                 if (isNaN(currentValue)){
                     currentValue = 0;
                 }
-                sumMarkedInput.value = currentValue + cellValue;
+                sumMarkedInput.value = currentValue + Number(cell.textContent);
             }
         })
     }

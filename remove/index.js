@@ -29,7 +29,7 @@ buttonRemove.addEventListener("click", () => {
             cell.style.backgroundColor = "red";
             cell.textContent = "X";
             amount++;
-            longInput.value = `${randomRemove.value} removed ${amount} times`;
         } 
     }
+    longInput.value = `${randomRemove.value} removed ${amount} times`;
 })
