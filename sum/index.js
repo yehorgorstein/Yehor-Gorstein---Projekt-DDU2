@@ -27,16 +27,16 @@ let sumAllInput = document.getElementById("sumAllInput");
 let sumMarkedInput = document.getElementById("sumMarkedInput");
 let buttonReset = document.getElementById("buttonReset");
 
-createButton.addEventListener("click", () => {
-    sumAll();
-    sumMarked();
-})
-sumAll();
-sumMarked();
-
 buttonReset.addEventListener("click", () => {
     sumMarkedInput.value = "-";
     for (let cell of grid.children){
         cell.style.backgroundColor = "lightgrey";
     }
 })
+
+createButton.addEventListener("click", () => {
+    sumAll();
+    sumMarked();
+})
+sumAll();
+sumMarked();

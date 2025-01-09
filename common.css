@@ -49,3 +49,7 @@ body{
     align-items: center;
     justify-content: center;
 }
+
+#repDiv{
+    margin-top: 20px;
+}

@@ -23,13 +23,16 @@ newRandomNumber.addEventListener("click", () => {
 
 buttonRemove.addEventListener("click", () => {
     let amount = 0;
-    longInput.value = "Nothing to remove";
     for (let cell of grid.children){
-        if (cell.style.backgroundColor == "orange"){
+        if (cell.style.backgroundColor === "orange"){
             cell.style.backgroundColor = "red";
             cell.textContent = "X";
             amount++;
         } 
     }
-    longInput.value = `${randomRemove.value} removed ${amount} times`;
+    if (amount > 0){
+        longInput.value = `${randomRemove.value} removed ${amount} times`;
+    } else {
+        longInput.value = "Nothing to remove";
+    }
 })
