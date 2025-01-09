@@ -16,8 +16,8 @@ let fillCleared = document.getElementById("fillCleared");
 
 fillCleared.addEventListener("click", () => {
     for (let cell of grid.children){
-        cell.classList.remove("cellCleared");
-        if (cell.textContent == ""){
+        if (cell.textContent === ""){
+            cell.classList.remove("cellCleared");
             cell.textContent = numberRandomizer();
         }
     }
